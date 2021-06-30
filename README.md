@@ -2,7 +2,7 @@
 QB Slots System
 
 # Credits:
-* Created By <a href="https://forum.cfx.re/u/plesalex100">plesalex100</a> for vRP
+* Created By <a href="https://forum.cfx.re/u/plesalex100">plesalex100</a> for vRP on <a href="https://forum.cfx.re/t/release-vrp-esx-slots-5x3-slot-machine-animated-sound-effects/627146">Fivem's Forums</a>
 * Converted to QBCore by Hiso#8997
 
 
