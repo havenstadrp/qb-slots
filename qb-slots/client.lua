@@ -66,13 +66,14 @@ AddEventHandler("qb-slots:enterBets", function ()
 	}
 	TriggerEvent('inventory:client:requiredItems', requiredItems, true)
 	TriggerEvent('QBCore:Notify', 'How many chips you wanna bet? (Only 50 on 50 values.)', 'success')
-    local bets = KeyboardInput("Enter bet value:", "", Config.MaxBetNumbers)
-    if tonumber(bets) ~= nil then
-    	TriggerServerEvent('qb-slots:BetsAndChips', tonumber(bets))
+    	local bets = KeyboardInput("Enter bet value:", "", Config.MaxBetNumbers)
+    	if tonumber(bets) ~= nil then
+    		TriggerServerEvent('qb-slots:BetsAndChips', tonumber(bets))
 		TriggerEvent('inventory:client:requiredItems', requiredItems, false)
-    else
+    	else
 		TriggerEvent('QBCore:Notify', 'You need to enter numbers (9999 is max bet).')
-    end
+      		TriggerEvent('inventory:client:requiredItems', requiredItems, false)
+    	end
 end)
 
 RegisterNetEvent("qb-slots:UpdateSlots")
