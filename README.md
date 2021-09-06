@@ -2,13 +2,13 @@
 QB Slots System
 
 # Credits:
-* Created By <a href="https://forum.cfx.re/u/plesalex100">plesalex100</a> for vRP on <a href="https://forum.cfx.re/t/release-vrp-esx-slots-5x3-slot-machine-animated-sound-effects/627146">Fivem Forums</a>
+* Created By [plesalex100](https://forum.cfx.re/u/plesalex100) [Forum Post](https://forum.cfx.re/t/release-vrp-esx-slots-5x3-slot-machine-animated-sound-effects/627146)
 * Converted to QBCore by Hiso#8997
 
 
 # Dependencies:
-*  Latest qb-core
-*  <a href="https://github.com/Mojito-Fivem/bt-target">Mojito's BT-Target</a>
+*  [QBCore](https://github.com/qbcore-framework)
+*  [qb-target](https://github.com/BerkieBb/qb-target)
 
 # Preview: https://streamable.com/bcut8l
 
