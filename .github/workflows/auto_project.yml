@@ -14,5 +14,5 @@ jobs:
       with:
         token: ${{ secrets.AUTOPROJECT }}
         project-location: havenstadrp
-        project-name: 8
+        project-number: 8
         column-name: New
