@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: Put new issues and pull requests into project
       uses: peter-evans/create-or-update-project-card@v2
-        with:
-          token: ${{ secrets.AUTOPROJECT }}
-          project-location: havenstadrp
-          project-name: Havenstad 2.0 backlog
-          column-name: New
+      with:
+        token: ${{ secrets.AUTOPROJECT }}
+        project-location: havenstadrp
+        project-name: Havenstad 2.0 backlog
+        column-name: New
