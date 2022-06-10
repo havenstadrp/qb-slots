@@ -13,6 +13,6 @@ jobs:
       uses: peter-evans/create-or-update-project-card@v2
       with:
         token: ${{ secrets.AUTOPROJECT }}
-        project-location: havenstadrp
+        # project-location: havenstadrp
         project-number: 8
         column-name: New
