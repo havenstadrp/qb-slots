@@ -14,5 +14,5 @@ jobs:
       with:
         token: ${{ secrets.AUTOPROJECT }}
         project-location: havenstadrp
-        project-name: Havenstad 2.0 backlog
+        project-name: 8
         column-name: New
