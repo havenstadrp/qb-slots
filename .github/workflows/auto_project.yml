@@ -7,13 +7,13 @@ env:
   GITHUB_TOKEN: ${{ secrets.AUTOPROJECT }}
 
 jobs:
-  assign_one_project:
+  createCard:
     runs-on: ubuntu-latest
-    name: Assign to Triage
+    name: Autoassign to project
     steps:
-    - name: Put new issues and pull requests into triage
-      uses: srggrs/assign-one-project-github-action@1.2.0
+    - name: Put new issues and pull requests into project
+      uses: peter-evans/create-or-update-project-card@v1
       if: github.event.action == 'opened'
-      with:
-        project: 'https://github.com/orgs/havenstadrp/projects/8'
-        column_name: 'New'
+        with:
+          project-name: Havenstad 2.0 backlog
+          column-name: New
