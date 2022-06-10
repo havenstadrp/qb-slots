@@ -13,7 +13,6 @@ jobs:
     steps:
     - name: Put new issues and pull requests into project
       uses: peter-evans/create-or-update-project-card@v1
-      if: github.event.action == 'opened'
         with:
           project-name: Havenstad 2.0 backlog
           column-name: New
