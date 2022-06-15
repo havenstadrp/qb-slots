@@ -2,6 +2,7 @@
 -- Please respect it, don't repost it without my permission
 -- This Resource started from: https://codepen.io/AdrianSandu/pen/MyBQYz
 -- Converted to QBCore by Hiso#8997
+local QBCore = exports['qb-core']:GetCoreObject()
 local PlayerData = {}
 local open = false
 
@@ -53,7 +54,7 @@ end
 RegisterNetEvent("qb-slots:enterBets")
 AddEventHandler("qb-slots:enterBets", function()
     local requiredItems = {
-        [1] = {name = QBCore.Shared.Items["casinochips"]["name"], image = QBCore.Shared.Items["casinochips"]["image"]},
+        [1] = {name = QBCore.Shared.Items["casino_redchip"]["name"], image = QBCore.Shared.Items["casino_redchip"]["image"]},
     }
     TriggerEvent('inventory:client:requiredItems', requiredItems, true)
     TriggerEvent('QBCore:Notify', 'How many chips you wanna bet? (Only 50 on 50 values.)', 'success')

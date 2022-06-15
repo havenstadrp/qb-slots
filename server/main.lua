@@ -1,17 +1,18 @@
 -- This resource was made by plesalex100#7387
 -- Please respect it, don't repost it without my permission
 -- This Resource started from: https://codepen.io/AdrianSandu/pen/MyBQYz
--- Converted to QBCore by Hiso#8997
+-- Converted to QBCore by Hiso#8997.
+local QBCore = exports['qb-core']:GetCoreObject()
 RegisterServerEvent("qb-slots:BetsAndChips")
 AddEventHandler("qb-slots:BetsAndChips", function(bets)
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
     if xPlayer then
         if bets % 50 == 0 and bets >= 50 then
-            local playerChips = xPlayer.Functions.GetItemByName("casinochips")
+            local playerChips = xPlayer.Functions.GetItemByName("casino_redchip")
             if playerChips ~= nil and playerChips.amount >= bets then
-                TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['casinochips'], "remove")
-                xPlayer.Functions.RemoveItem("casinochips", bets)
+                TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['casino_redchip'], "remove")
+                xPlayer.Functions.RemoveItem("casino_redchip", bets)
                 TriggerClientEvent("qb-slots:UpdateSlots", source, bets)
             else
                 TriggerClientEvent('QBCore:Notify', source, "Not enought chips")
@@ -31,8 +32,8 @@ AddEventHandler("qb-slots:PayOutRewards", function(amount)
     if xPlayer then
         amount = tonumber(amount)
         if amount > 0 then
-            TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['casinochips'], "add")
-            xPlayer.Functions.AddItem("casinochips", amount)
+            TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['casino_redchip'], "add")
+            xPlayer.Functions.AddItem("casino_redchip", amount)
             TriggerClientEvent('QBCore:Notify', source, "Slots: You won " .. amount .. " chips, not bad at all!")
         else
             TriggerClientEvent('QBCore:Notify', source, "Slots: Unfortunately you've lost all your chips, maybe next time.")

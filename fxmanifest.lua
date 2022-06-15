@@ -11,7 +11,7 @@ version '1.0'
 
 ui_page 'html/ui.html'
 
-shared_script '@qb-core/import.lua'
+-- shared_script '@qb-core/import.lua'
 
 client_scripts {
 	'config.lua',

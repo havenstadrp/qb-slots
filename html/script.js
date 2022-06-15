@@ -14,27 +14,26 @@ var lines = [
   [[0, 0], [1, 1], [2, 2], [3, 1], [4, 0]],
   [[0, 2], [1, 1], [2, 0], [3, 1], [4, 2]]
 ];
-
-// Poti sa modifici win multiply-urile la fiecare fruct
-// primul 0 nu are nici o importanta
-// fiecare linie reprezinta succesiunea de multiplicari in functie de cate fructe de acelasi timp sunt prinse la rand intr-o linie
-// De exemplu: la Portocale daca prinzi 3 la rand multiply-ul o sa fie x4, daca prini 5 atunci aceasta va fi x40.
+// You can change the win multiplies on each fruit
+// the first 0 doesn't matter
+// each line represents the sequence of multiplications depending on how many fruits of the same time are caught in a row in a row
+// For example: in Orange if you catch 3 in a row the multiply will be x4, if you catch 5 then it will be x40.
 var winTable = [
   [0],
-  [1, 1, 3, 5, 10], // Cirese
-  [1, 1, 4, 10, 15], // Prune
-  [1, 1, 4, 10, 15], // Lamai
-  [1, 1, 4, 10, 15], // Portocale
-  [1, 1, 10, 20, 50], // Struguri
-  [1, 1, 10, 20, 50], // Pepene
-  [1, 1, 20, 150, 600] // Septar
+  [1, 1, 3, 5, 10], // Cherry
+  [1, 1, 4, 10, 15], // Strawberry
+  [1, 1, 4, 10, 15], // Apple
+  [1, 1, 4, 10, 15], // Orange
+  [1, 1, 10, 20, 50], // Grapes
+  [1, 1, 10, 20, 50], // Watermelon
+  [1, 1, 20, 150, 600] // Seven
 ];
 
-/// De aici in jos aveti grija ce modificati, o face-ti pe riscul vostru
+/// From here on out, be careful what you change, do it at your own risk
 const SLOTS_PER_REEL = 12;
 const REEL_RADIUS = 209;
 
-var fructe = ["", "Cirese", "Prune", "Lamai", "Portocale", "Struguri", "Pepene", "Septar"];
+var fruit = ["", "Cherry", "Strawberry", "Apple", "Orange", "Grapes", "Watermelon", "Seve"];
 
 var audios = [];
 var audioIds = [
@@ -176,7 +175,7 @@ function voteColor(x, color) {
     if (colorHistory[cont] == 0) { imgColor = 'red'; }
     $('#h' + pls).empty();
     if (imgColor !== "none") {
-      $('#h' + pls).append("<img src='img/" + imgColor + ".png' width=30px height=30px/>");
+      $('#h' + pls).append("<img src='img/" + imgColor + ".png' class='historyImg'/>");
       pls++;
     }
   }
